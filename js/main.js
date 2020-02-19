@@ -15,6 +15,7 @@ btnAdd.addEventListener("click", function () {
 */
 window.onload = build; //page loading calling this function
 function build() {
+  
     output.innerHTML = "<h2> My List </h2>"
     const tbl = document.createElement("table");
     for (let i = 0; i < myList.length; i++) {
@@ -46,14 +47,17 @@ function build() {
                tempEle.innerHTML=newInput.value;
                row.style.backgroundColor="White";
                myList[i]=newInput.value;
+               
            })
         })
+        var jsontype=JSON.stringify(myList);
+        var changetype=JSON.parse(jsontype)
         cell2.appendChild(span2);
         row.appendChild(cell2);
         tbl.appendChild(row);
     }
     
 
-
+   console.log(changetype);
     output.appendChild(tbl);
 }
