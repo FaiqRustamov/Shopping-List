@@ -3,6 +3,32 @@ td span{
     color: green;
     padding: 5px;
     cursor: pointer;
+    float: right;
+}
+.span1{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #f44336;
+}
+.span2{
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   background-color:yellow ;
 }
 td:first-child{
     width: 250px;
@@ -13,19 +39,40 @@ table{
     border-collapse: collapse;
     width: 100%;
 }
-table td, table th {
+table td {
     border: 1px solid #ddd;
     padding: 8px;
   }
   
-  table tr:nth-child(even){background-color: #f2f2f2;}
+  table tr:nth-child(even){
+      background-color: #f2f2f2;}
   
-  table tr:hover {background-color: #ddd;}
-  
-  table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
+  table tr:hover {
+      background-color: #ddd;}
+  #addNew{
+    border: none;
     color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #00ff15;
+
+  }
+  h1{
+      text-align: center;
+  }
+  input[type=text] {
+   width: 200px;
+    padding: 20px 10px;
+    line-height: 28px;
+    margin:25px;
+    border: none;
+    border-bottom: 2px solid #00ff15;
+  }
+  input[type=text]:focus {
+    width: 450px;
   }

@@ -1,3 +1,5 @@
+
+
 let myList = ["bananas", "milk", "apples", "redbull"];
  // verilen list
 const btnAdd = document.querySelector("#addNew"); //add element
@@ -15,7 +17,7 @@ btnAdd.addEventListener("click", function () {
 */
 window.onload = build; //page loading calling this function
 function build() {
-  
+    myStorage = window.localStorage;
     output.innerHTML = "<h2> My List </h2>"
     const tbl = document.createElement("table");
     for (let i = 0; i < myList.length; i++) {
@@ -36,6 +38,8 @@ function build() {
         cell2.appendChild(span1);
         const span2 = document.createElement("span");
         span2.innerText = "Edit"; //edit button for change element 
+        span1.setAttribute("class","span1");
+        span2.setAttribute("class","span2");
         span2.addEventListener('click',function() {
            let tempEle=row.firstElementChild;
            const newInput=document.createElement('input');
@@ -51,7 +55,8 @@ function build() {
            })
         })
         var jsontype=JSON.stringify(myList);
-        var changetype=JSON.parse(jsontype)
+        var changetype=JSON.parse(jsontype);
+       
         cell2.appendChild(span2);
         row.appendChild(cell2);
         tbl.appendChild(row);
@@ -60,4 +65,9 @@ function build() {
 
    console.log(changetype);
     output.appendChild(tbl);
+ 
+        // Store
+        localStorage.setItem("id",changetype);
+        // Retrieve
+      
 }
